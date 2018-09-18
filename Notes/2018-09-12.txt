@@ -3,48 +3,48 @@
 +--------------+
 
 Análisis y Diseño:
-	Código (Bajo nivel)
-		Solución (Alto nivel) -> e.g Desarrollar objetos, ver relaciones utilizando los estandards que OOP nos da
-			Arquitectura
+    Código (Bajo nivel)
+        Solución (Alto nivel) -> e.g Desarrollar objetos, ver relaciones utilizando los estandards que OOP nos da
+            Arquitectura
 		
 		
 Programación Orientada a Objetos (POO):
-	- Requerimientos
-	- Casos de Uso
-		[Análisis y Diseño Orientado a Objetos] -> Abstracción
-	- Programación								-> Modelo conceptual
-												-> Clases
+    - Requerimientos
+    - Casos de Uso
+        [Análisis y Diseño Orientado a Objetos] -> Abstracción
+    - Programación                              -> Modelo conceptual
+                                                -> Clases
 
 
 Lenguaje de Modelado Unificado (Esquema de notación):
-	Elementos:
-		- Casos de uso
-		- Modelo conceptual
-		- Modelo de clases
-		- Diagramas de secuencia.
+    Elementos:
+        - Casos de uso
+        - Modelo conceptual
+        - Modelo de clases
+        - Diagramas de secuencia.
 		
 		
 Objetos:
-	- Características (varibles) <- Atributos
-	- Comportamientos (rutinas) <- Métodos
+    - Características (varibles) <- Atributos
+    - Comportamientos (rutinas) <- Métodos
 	
 	
 Clase:
-	public class Vehiculo {			  -> siempre es publica y primera letra de la clase mayuscula.
-		public tipoDato nombre;		  -> lista de atributos
+    public class Vehiculo {           -> siempre es publica y primera letra de la clase mayuscula.
+        public tipoDato nombre;       -> lista de atributos
 		
-		public tipoDato getNombre() { -> lista de métodos 
-			return nombre;
-		}
+        public tipoDato getNombre() { -> lista de métodos 
+            return nombre;
+        }
 		
 		
-+-----------------------+
-|		Examen			 +-> Nombre de la clase
-+-----------------------+
-|	alumno: String		 |
-|	nota: double		 +-> Atributos
-|	materia: String		 |
-|	fecha: LocalDate	 |
-+-----------------------+
-|	imprimir(): String	 +-> Métodos
-+-----------------------+
++------------------------+
+|    Examen              +->Nombre de la clase
++------------------------+
+|    alumno: String      |
+|    nota: double        +-> Atributos
+|    materia: String     |
+|    fecha: LocalDate    |
++------------------------+
+|    imprimir(): String  +-> Métodos
++------------------------+

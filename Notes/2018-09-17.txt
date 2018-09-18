@@ -1,0 +1,12 @@
+Un objeto es una abstracción:
+    - Lista de cosas -> clases
+	- Lista de caracteristicas -> atributos
+	- Lista de acciones -> métodos
+
+1. Abstracción
+2. Encapsulamiento
+3. Jerarquía
+4. Poliforfismo
+
+Java Collection Framework
+    -> ArrayList
