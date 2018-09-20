@@ -1,0 +1,60 @@
+1. Abstracción
+       - Lista de conceptos 
+             - Lista de sustantivos <-+-> Lista de adjetivos <-+-> Lista de verbos
+			
+2. Objetos
+       -> Nombre
+       -> Estado
+       -> Comportamientos
+	
+       nombre
+       atributos
+	   métodos
+	
+3. Crear los diagramas
+
+4. Generación o codificación de las clases
+
+
+
+Encapsulamiento:
+    - Ocultar atributos
+	- private
+	- get/set
+	
++------------------------+ +------------------------+
+|        Alumno          | |       Materia          |
++------------------------+ +------------------------+
+| nombre: String         | | nombre: String         |
+| identificacion: String | | descripcion: String    |
+| apellidos: String      | | codigo: String         |
+| direccion: String      | +------------------------+
+| estado: boolean        | | get/set                |
++------------------------+ | toString(): String     |
+| get/set                | +------------------------+
+| toString(): String     |
++------------------------+ 
+
+Constructor:
+    public Examen() {
+	    materia = "";
+		fecha =
+		preguntas = new int[3][3];
+	}
+	
+Sobrecarga de métodos:
+	Mismo nombre de método, diferentes parámetros o cantidad de párametros.
+	
+Inicializar ArrayList en el Constructor:	
+    public class CL {
+        private ArrayList<Laboratorio> labs;
+	
+        public CL() {
+            labs = new ArrayList<>();
+        }
+    }
+	
+    // Los atributos de una clase no se inicializan de un solo,
+    // sino que se inicializan cuando se necesita, e.g en el constructor.
+    // Solamente se inicializan de primero cuando son atributos constantes o estáticos.	
+	
