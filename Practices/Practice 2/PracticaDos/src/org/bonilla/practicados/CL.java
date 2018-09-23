@@ -60,8 +60,6 @@ public class CL {
     }
 
 
-
-
     // Getters
     public ArrayList<Inquilino> getInquilinosLista() {
         return inquilinosLista;

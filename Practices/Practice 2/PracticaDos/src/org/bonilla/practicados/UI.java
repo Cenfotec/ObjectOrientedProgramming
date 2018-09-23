@@ -11,11 +11,12 @@ public class UI {
     static CL cl = new CL();
 
     public static void main(String[] args) throws IOException {
-        menuHandler();
+        menuPrincipal();
 
     }
 
-    public static void menuHandler() throws IOException {
+
+    public static void menuPrincipal() throws IOException {
         String opcion;
         boolean menu = true;
         do {
@@ -25,6 +26,7 @@ public class UI {
         } while (menu);
     }
 
+
     public static String leerOpcion() throws IOException {
         out.println("----------------------------------------");
         out.print("Seleccione una opción: ");
@@ -33,6 +35,7 @@ public class UI {
         return opcion;
     }
 
+
     public static void mostrarMenu() {
         out.println("\n----------------------------------------");
         out.println("1. Registrar Inquilino");
@@ -40,6 +43,7 @@ public class UI {
         out.println("3. Listar Inquilino");
         out.println("4. Listar Propiedad");
     }
+
 
     public static boolean seleccionarOpcion(String opcion) throws IOException {
         boolean menu = true;
@@ -78,7 +82,7 @@ public class UI {
         String identificacion = br.readLine();
         out.print("Género: ");
         String genero = br.readLine();
-
+        
         if (cl.buscarInquilino(identificacion) == null) {
             Inquilino inquilino = new Inquilino(nombre, correoElectronico, direccion, telefono, identificacion, genero);
             cl.registrarInquilino(inquilino);
@@ -86,11 +90,8 @@ public class UI {
         } else {
             out.print("[!] Este inquilino ya existe!");
         }
-
-
-
-
     }
+
 
     // Registrar Propiedades
     public static void registrarPropiedad() throws IOException {
@@ -118,9 +119,5 @@ public class UI {
         } else {
             out.print("[!] Esta propiedad ya existe!");
         }
-
-
-
-
     }
 }

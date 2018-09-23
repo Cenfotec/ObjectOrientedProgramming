@@ -17,6 +17,7 @@ public class Inquilino {
         this.genero = genero;
     }
 
+
     // Getters
     public String getNombre() {
         return nombre;

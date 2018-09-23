@@ -8,8 +8,7 @@ public class Propiedad {
     private String residencial;
     private int numeroCasa;
     private boolean patio;
-    private int cantidadHabitaciones; // cuartos, sala, comedor y cuarto de pilas
-
+    private int cantidadHabitaciones;
 
     public Propiedad(int codigo, String nombre, double valorInmueble, String direccion, String residencial, int numeroCasa, boolean patio, int cantidadHabitaciones) {
         this.codigo = codigo;
@@ -21,6 +20,7 @@ public class Propiedad {
         this.patio = patio;
         this.cantidadHabitaciones = cantidadHabitaciones;
     }
+
 
     // Getters
     public int getCodigo() {
