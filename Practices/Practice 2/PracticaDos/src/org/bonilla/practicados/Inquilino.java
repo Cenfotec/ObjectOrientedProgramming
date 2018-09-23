@@ -1,9 +1,5 @@
 package org.bonilla.practicados;
 
-// De los inquilinos desea que se pueda registrar
-// el nombre, apellidos, correo electrónico, dirección y teléfono,
-// así como la identificación y el género.
-
 public class Inquilino {
     private String nombre;
     private String correoElectronico;
@@ -75,8 +71,12 @@ public class Inquilino {
 
     // toString
     public String toString() {
-        return "Nombre: " + nombre + ", Correo Electrónico: " + correoElectronico +
-                ", Dirección: " + direccion + ", Teléfono: " + telefono +
-                ", Identificación: " + identificacion + ", Género: " + genero;
+        return "\n+----------" +
+                "\n| Nombre: " + nombre +
+                "\n| Correo electrónico: " + correoElectronico +
+                "\n| Dirección: " + direccion +
+                "\n| Teléfono: " + telefono +
+                "\n| Identificación: " + identificacion +
+                "\n| Género: " + genero;
     }
 }

@@ -22,11 +22,38 @@ public class CL {
     }
 
 
+    // Listar
+    public String listarInquilinos() {
+        String lista = "";
+        for (int i = 0; i < inquilinosLista.size(); i++) {
+            lista += inquilinosLista.get(i).toString();
+        }
+        return lista;
+    }
+
+    public String listarPropiedades() {
+        String lista = "";
+        for (int i = 0; i < propiedadesLista.size(); i++) {
+            lista += propiedadesLista.get(i).toString();
+        }
+        return lista;
+    }
+
+
     // Buscar
     public Inquilino buscarInquilino(String identificacion) {
         for (int i = 0; i < inquilinosLista.size(); i++) {
             if (inquilinosLista.get(i).getIdentificacion() == identificacion) {
                 return inquilinosLista.get(i);
+            }
+        }
+        return null;
+    }
+
+    public Propiedad buscarPropiedad(int codigo) {
+        for (int i = 0; i < propiedadesLista.size(); i++) {
+            if (propiedadesLista.get(i).getCodigo() == codigo) {
+                return propiedadesLista.get(i);
             }
         }
         return null;

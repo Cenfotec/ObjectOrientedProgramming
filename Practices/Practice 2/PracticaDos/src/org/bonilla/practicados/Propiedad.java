@@ -1,12 +1,5 @@
 package org.bonilla.practicados;
 
-// De las propiedades se desea que pueda incluir un código numérico,
-// el nombre (el tío Rico es un poco excéntrico, entonces a cada casa
-// le pone un nombre), el valor del inmueble, la dirección, el Residencial,
-// el número de casa, si tiene patio o no y la cantidad de habitaciones
-// (las habitaciones incluyen tanto los cuartos, como la sala, el comedor
-// y el cuarto de pilas).
-
 public class Propiedad {
     private int codigo;
     private String nombre;
@@ -83,10 +76,14 @@ public class Propiedad {
 
     // toString
     public String toString() {
-        return "Código: " + codigo + ", Nombre: " + nombre +
-                ", Valor inmueble: " + valorInmueble + ", Dirección: " + direccion +
-                ", Residencial: " + residencial + ", Número de casa: " + numeroCasa +
-                ", Patio: " + patio + ", Cantidad de habitaciones: " + cantidadHabitaciones;
+        return "\n+----------" +
+                "\n| Código: " + codigo +
+                "\n| Nombre: " + nombre +
+                "\n| Valor inmueble: " + valorInmueble +
+                "\n| Dirección: " + direccion +
+                "\n| Número de casa: " + numeroCasa +
+                "\n| Tiene patio: " + ((patio) ? "Sí" : "No") +
+                "\n| Cantidad de habitaciones: " + cantidadHabitaciones;
     }
 }
 

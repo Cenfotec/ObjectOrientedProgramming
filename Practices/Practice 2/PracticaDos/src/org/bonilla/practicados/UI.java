@@ -49,15 +49,15 @@ public class UI {
         }
 
         if (opcion.equals("2")) {
-            // Segunda opción
+            registrarPropiedad();
         }
 
         if (opcion.equals("3")) {
-            listarInquilinos();
+            out.print(cl.listarInquilinos());
         }
 
         if (opcion.equals("4")) {
-            listarPropiedades();
+            out.print(cl.listarPropiedades());
         }
 
         return menu;
@@ -79,10 +79,17 @@ public class UI {
         out.print("Género: ");
         String genero = br.readLine();
 
-        Inquilino inquilino = new Inquilino(nombre, correoElectronico, direccion, telefono, identificacion, genero);
-        cl.registrarInquilino(inquilino);
+        if (cl.buscarInquilino(identificacion) == null) {
+            Inquilino inquilino = new Inquilino(nombre, correoElectronico, direccion, telefono, identificacion, genero);
+            cl.registrarInquilino(inquilino);
+            out.print("[+] Inquilino ha sido registrado !");
+        } else {
+            out.print("[!] Este inquilino ya existe!");
+        }
 
-        out.print("[+] Inquilino ha sido registrado!");
+
+
+
     }
 
     // Registrar Propiedades
@@ -99,45 +106,21 @@ public class UI {
         String residencial = br.readLine();
         out.print("Número de casa: ");
         int numeroCasa = Integer.parseInt(br.readLine());
-        out.print("Tiene patio? [si/no]");
+        out.print("Tiene patio? [si/no] ");
         boolean patio = (br.readLine().equalsIgnoreCase("si")) ? true : false;
         out.print("Cantidad de habitaciones: ");
         int cantidadHabitaciones = Integer.parseInt(br.readLine());
 
-        Propiedad propiedad = new Propiedad(codigo, nombre, valorInmueble, direccion, residencial, numeroCasa, patio, cantidadHabitaciones);
-        cl.registrarPropiedad(propiedad);
-
-        out.print("[+] Propiedad ha sido registrada!");
-    }
-
-
-    // Listar Inquilinos
-    public static void listarInquilinos() {
-        for (int i = 0; i < cl.getInquilinosLista().size(); i++) {
-            out.println("+----------");
-            out.println("| Nombre: " + cl.getInquilinosLista().get(i).getNombre());
-            out.println("| Correo electrónico: " + cl.getInquilinosLista().get(i).getCorreoElectronico());
-            out.println("| Dirección: " + cl.getInquilinosLista().get(i).getDireccion());
-            out.println("| Teléfono: " + cl.getInquilinosLista().get(i).getTelefono());
-            out.println("| Identificación: " + cl.getInquilinosLista().get(i).getIdentificacion());
-            out.println("| Género: " + cl.getInquilinosLista().get(i).getGenero());
+        if (cl.buscarPropiedad(codigo) == null) {
+            Propiedad propiedad = new Propiedad(codigo, nombre, valorInmueble, direccion, residencial, numeroCasa, patio, cantidadHabitaciones);
+            cl.registrarPropiedad(propiedad);
+            out.print("[+] Propiedad ha sido registrada!");
+        } else {
+            out.print("[!] Esta propiedad ya existe!");
         }
-    }
 
 
-    // Listar Propiedad
-    public static void listarPropiedades() {
-        for (int i = 0; i < cl.getPropiedadesLista().size(); i++) {
-            out.println("+----------");
-            out.println("| Código: " + cl.getPropiedadesLista().get(i).getNombre());
-            out.println("| Nombre: " + cl.getPropiedadesLista().get(i).getNombre());
-            out.println("| Valor inmueble: " + cl.getPropiedadesLista().get(i).getValorInmueble());
-            out.println("| Dirección: " + cl.getPropiedadesLista().get(i).getDireccion());
-            out.println("| Residencial: " + cl.getPropiedadesLista().get(i).getResidencial());
-            out.println("| Número de casa: " + cl.getPropiedadesLista().get(i).getNumeroCasa());
-            String patio = (cl.getPropiedadesLista().get(i).isPatio()) ? "Sí" : "No";
-            out.println("| Tiene patio: " + patio);
-            out.println("| Cantidad de habitaciones: " + cl.getPropiedadesLista().get(i).getCantidadHabitaciones());
-        }
+
+
     }
 }
