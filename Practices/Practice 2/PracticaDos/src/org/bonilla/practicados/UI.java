@@ -40,8 +40,8 @@ public class UI {
         out.println("\n----------------------------------------");
         out.println("1. Registrar Inquilino");
         out.println("2. Registrar Propiedad");
-        out.println("3. Listar Inquilino");
-        out.println("4. Listar Propiedad");
+        out.println("3. Listar Inquilinos");
+        out.println("4. Listar Propiedads");
     }
 
 
@@ -82,7 +82,7 @@ public class UI {
         String identificacion = br.readLine();
         out.print("Género: ");
         String genero = br.readLine();
-        
+
         if (cl.buscarInquilino(identificacion) == null) {
             Inquilino inquilino = new Inquilino(nombre, correoElectronico, direccion, telefono, identificacion, genero);
             cl.registrarInquilino(inquilino);
@@ -93,7 +93,7 @@ public class UI {
     }
 
 
-    // Registrar Propiedades
+    // Registrar Propiedad
     public static void registrarPropiedad() throws IOException {
         out.print("\nCódigo: ");
         int codigo = Integer.parseInt(br.readLine());
