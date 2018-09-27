@@ -1,0 +1,16 @@
+Paquete: 
+    - Unidiad de organización
+    - Folder/Carpeta
+	
+1 Sola clase:
+    - Estudiante.java -+-> Objetos de Negocio -+
+    - Libro.java      -+                       |
+                                               +-> Lógica de Negocio
+    - CL:                                      |
+        - ArrayList                           -+
+		
+Biblioteca:
+    - src:
+        - UI [carpeta] -> .java
+        - BL [carptea] -> .java
+        - DL [carpeta] -> .java
