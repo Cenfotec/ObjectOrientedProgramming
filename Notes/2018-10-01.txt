@@ -1,0 +1,18 @@
+Tipos de relaciones entre objetos:
+    - Herencia
+    - Asociación (agregación y composición)
+
+Jerarquia de clases:
+    - Estructura piramidal.
+    - Herencia:
+        - Atributos
+        - Comportamientos
+	
+	
+Clase "Gestor":
+    - Recibe los datos de la UI
+    - Crear objetos y pasarlos CL
+    - Transforma Objetos de "CapaLogica" a Strings para la "UI"
+	
+Clase "CapaLogica":
+    - Protege sus datos creando una copia de sus ArrayList
