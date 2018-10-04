@@ -1,0 +1,42 @@
+Herencia:
+    - Alguien le "pasa" atributos y métodos a otros
+    - Palabra reservada "extends"
+	
++----------------------------------------------------------------------------+
+|                                                                            |
+| Sin Herencia:                                                              |
+|    - Estudiante:                                                           |
+|        - nombre, apellido, identificacion, carrera, creditos               |
+|    - Profesor:                                                             |
+|       - nombre, apellido, identificacion, tipoContrato, fechaContracion    |
+|    - Administrativo:                                                       |
+|        - nombre, apellido, identificacion, tipoNombramiento, cantHoras     |
+|                                                                            |
+| Con Herencia:                                                              |
+|    - Persona:                                                              |
+|        - nombre, apellido, identificacion                                  |
+|    - Estudiante:                                                           |
+|        - carrera, creditos                                                 |
+|    - Profesor:                                                             |
+|        - tipoContrato, fechaContracion                                     |
+|    - Administrativo:                                                       |
+|        - tipoNombramiento, cantHoras                                       |
+|                                                                            |
++----------------------------------------------------------------------------+
+		
+Protected:
+    - "protected Sring nombre;"
+    - Se le asigna a los atributos que se desean heredar a los hijos
+		
+Constructor:
+    - Persona()                       +-> Sobrecarga de métodos / Method Overloading
+    - Persona(String, String, String) |
+	
+Sobreescritura / Override:
+    - Sobreescribir métodos de los del padre para usarlos en el hijo
+	
+Polimorfismo / Polymorphism:
+    - Capacidad de un objeto de actuar de muchas formas.
+    - Estudinate +-> Object
+                 +-> Estudiante
+                 +-> Persona
