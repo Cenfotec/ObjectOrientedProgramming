@@ -6,8 +6,8 @@ import org.bonilla.bl.Propiedad;
 import java.io.*;
 
 public class TextFileReader {
-    private static final File INQUILINOS_FILE = new File("src/org/bonilla/Inquilino.txt");
-    private static final File PROPIEDADES_FILE = new File("src/org/bonilla/Propiedad.txt");
+    private static final File INQUILINOS_FILE = new File("src/org/bonilla/Inquilinos.txt");
+    private static final File PROPIEDADES_FILE = new File("src/org/bonilla/Propiedades.txt");
     private static final String CHARSET = "UTF-8";
     private static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     private static OutputStreamWriter osw;
