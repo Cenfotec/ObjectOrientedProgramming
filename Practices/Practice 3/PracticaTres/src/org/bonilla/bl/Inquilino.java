@@ -72,12 +72,8 @@ public class Inquilino {
 
 	// toString
 	public String toString() {
-		return "\n+----------" +
-				"\n| Nombre: " + nombre +
-				"\n| Correo electrónico: " + correoElectronico +
-				"\n| Dirección: " + direccion +
-				"\n| Teléfono: " + telefono +
-				"\n| Identificación: " + identificacion +
-				"\n| Género: " + genero;
+		return nombre + "," + correoElectronico + "," +
+				direccion + "," + telefono + "," +
+				identificacion + "," + genero;
 	}
 }

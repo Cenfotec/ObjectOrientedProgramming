@@ -3,14 +3,15 @@ package org.bonilla.tl;
 import org.bonilla.bl.Inquilino;
 import org.bonilla.bl.Propiedad;
 import org.bonilla.dl.CapaLogica;
-
-import java.util.ArrayList;
+import org.bonilla.dl.TextFileReader;
 
 public class Gestor {
     private CapaLogica logica;
+    private TextFileReader tfr;
 
     public Gestor() {
         logica = new CapaLogica();
+        tfr = new TextFileReader();
     }
 
     // Registrar inquilino
@@ -28,20 +29,20 @@ public class Gestor {
     }
 
     // Listar inquilinos
-    public String[] listarInquilinos() {
-        String[] data = new String[logica.getListaInquilinos().size()];
-        for (Inquilino i : logica.getListaInquilinos()) {
-            data[logica.getListaInquilinos().indexOf(i)] = i.toString();
-        }
-        return data;
+    public String listarInquilinos() {
+        return tfr.listarInquilinos();
     }
 
     // Listar propiedades
-    public String[] listarPropiedad() {
-        String[] data = new String[logica.getListaPropiedades().size()];
-        for (Propiedad p : logica.getListaPropiedades()) {
-            data[logica.getListaPropiedades().indexOf(p)] = p.toString();
-        }
-        return data;
+    public String listarPropiedades() { return tfr.listarPropiedades(); }
+
+    // Buscar inquilino
+    public boolean buscarInquilino(String identificacion) {
+        return tfr.buscarInquilino(identificacion);
+    }
+
+    // Buscar propiedad
+    public boolean buscarPropiedad(int codigo) {
+        return tfr.buscarPropiedad(codigo);
     }
 }

@@ -1,6 +1,5 @@
 package org.bonilla.ui;
 
-import org.bonilla.dl.CapaLogica;
 import org.bonilla.tl.Gestor;
 
 import java.io.BufferedReader;
@@ -11,7 +10,6 @@ import java.io.PrintStream;
 public class UI {
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static PrintStream out = System.out;
-    static CapaLogica logica = new CapaLogica();
     static Gestor controller = new Gestor();
 
     public static void main(String[] args) throws IOException {
@@ -20,7 +18,7 @@ public class UI {
 
     public static void menuPrincipal() throws IOException {
         String opcion;
-        boolean menu = true;
+        boolean menu;
         do {
             mostrarMenu();
             opcion = leerOpcion();
@@ -94,7 +92,11 @@ public class UI {
         out.print("Género: ");
         genero = br.readLine();
 
-        controller.registrarInquilino(nombre, correoElectronico, direccion, telefono, identificacion, genero);
+        if (!controller.buscarInquilino(identificacion)) {
+            controller.registrarInquilino(nombre, correoElectronico, direccion, telefono, identificacion, genero);
+        } else {
+            out.print("[!] Este inquilino ya existe!");
+        }
     }
 
     // Registar propiedad
@@ -124,22 +126,22 @@ public class UI {
         out.print("Cantidad de habitaciones: ");
         cantidadHabitaciones = Integer.parseInt(br.readLine());
 
-        controller.registrarPropiedad(codigo, nombre, valorInmueble, direccion, residencial, numeroCasa, patio, cantidadHabitaciones);
+        if (!controller.buscarPropiedad(codigo)) {
+            controller.registrarPropiedad(codigo, nombre, valorInmueble, direccion, residencial, numeroCasa, patio, cantidadHabitaciones);
+        } else {
+            out.print("[!] Esta propiedad ya existe!");
+        }
     }
 
     // Listar inquilinos
     public static void listarInquilinos() {
-        String[] data = controller.listarInquilinos();
-        for (String s : data) {
-            out.print(s);
-        }
+        String lista = controller.listarInquilinos();
+        out.print(lista);
     }
 
     // Listar propiedades
     public static void listarPropiedades() {
-        String[] data = controller.listarPropiedad();
-        for (String s : data) {
-            out.print(s);
-        }
+        String lista = controller.listarPropiedades();
+        out.print(lista);
     }
 }

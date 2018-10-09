@@ -46,7 +46,7 @@ public class Propiedad {
         return numeroCasa;
     }
 
-    public boolean isPatio() {
+    public boolean getPatio() {
         return patio;
     }
 
@@ -75,13 +75,9 @@ public class Propiedad {
 
     // toString
     public String toString() {
-        return "\n+----------" +
-                "\n| Código: " + codigo +
-                "\n| Nombre: " + nombre +
-                "\n| Valor inmueble: " + valorInmueble +
-                "\n| Dirección: " + direccion +
-                "\n| Número de casa: " + numeroCasa +
-                "\n| Tiene patio: " + ((patio) ? "Sí" : "No") +
-                "\n| Cantidad de habitaciones: " + cantidadHabitaciones;
+        return codigo + "," + nombre + "," +
+                valorInmueble + "," + direccion + "," +
+                residencial + "," + numeroCasa + "," +
+                ((patio) ? "Sí" : "No") + "," + cantidadHabitaciones;
     }
 }
