@@ -13,7 +13,7 @@ public class UI {
 
     public static void menuPrincipal() throws IOException {
         String opcion;
-        boolean menu = true;
+        boolean menu;
         do {
             mostrarMenu();
             opcion = leerOpcion();
