@@ -43,7 +43,7 @@ public class CL {
     // Buscar
     public Inquilino buscarInquilino(String identificacion) {
         for (int i = 0; i < inquilinosLista.size(); i++) {
-            if (inquilinosLista.get(i).getIdentificacion() == identificacion) {
+            if (inquilinosLista.get(i).getIdentificacion().equalsIgnoreCase(identificacion)) {
                 return inquilinosLista.get(i);
             }
         }
