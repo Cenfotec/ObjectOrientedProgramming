@@ -1,0 +1,23 @@
+Aplicación > IDE > Local
+Repositorio -> Archivo > Local
+
+Capas:
+    - Cliente
+    - Servidor:
+        - Lógica
+        - Almacenamiento
+		
+Librería / Library:
+    - Archivos ".class" que ofrecen una funcionalidad que puede ser extendida usando herencia
+      o requerida por una aplicación.
+    - Funcionalidad reutilizable por un código.
+    - ".jar", ".ear" o ".war"
+    - "tl", "bl", "dl" tienen que estar en un proyecto aparte -> Generar un ".jar" (exportar)
+    - "ui" tiene que ir en otro proyecto -> Consumir un jar (importar)
+	
+Javadoc:
+    - Generador de documentación.
+    Tiene:
+        - @author = autor del código
+        - @params = qué es el parametro
+        - @returns = el valor del return
