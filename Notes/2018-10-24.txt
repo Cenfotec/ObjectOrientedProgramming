@@ -1,0 +1,20 @@
+Asosiaciones -> Relación entre 2 clases (1 o 2 vias)
+    - Asosiación Simple: e.g Laboratorio -> Curso
+    - Agregación: e.g Curso -> Estudiante
+    - Composición: (El componento es único)
+        - Constructor no puede estar vacío 
+	
+e.g
+class Profesor {
+    int edad;
+    String nombre; 
+}
+
+class Curso {
+    int codigo;
+    String nombre;
+    Profesor profesor;
+}
+
+Clase* -> Clase sola
+Clase con Herencia* -> Diagrama de clases
