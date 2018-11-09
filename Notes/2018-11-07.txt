@@ -1,0 +1,18 @@
+Clase Abstracta/Abstract Class:
+    - Keyword: 'abstract'
+    - Fuerza a sus hijos a hacer una implementación específica.
+    - Requisitos:
+        - Marcar la clase como 'abstract'
+        - Debe tener por lo menos 1 método abstracto.
+        - El método abstracto no puede tener cuerpo.
+    - No puede instanciar una clase abstracta: Figura f = new Figura();
+	
+Interfaz/Interface:
+    - Elementos de java que especifican comportamiento.
+    - No necesariamente van a tener atributos.
+    - Lista de métodos.
+    - Métodos no tienen cuerpo.
+    - Polimorfismo.
+    - Encapsulamiento.
+    - Declarar variables del tipo de la interfaz.
+    - ITest; -> ITest prueba;
