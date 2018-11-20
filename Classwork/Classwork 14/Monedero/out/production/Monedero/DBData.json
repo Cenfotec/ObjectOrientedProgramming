@@ -1,0 +1,7 @@
+{
+  "driver": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+  "server": "DESKTOP-G0CTG48\\SQLEXPRESS",
+  "database": "Monedero",
+  "user": "sa",
+  "password": "123456"
+}
