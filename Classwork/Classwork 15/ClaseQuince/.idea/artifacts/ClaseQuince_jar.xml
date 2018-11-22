@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ClaseQuince:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ClaseQuince_jar</output-path>
+    <root id="archive" name="ClaseQuince.jar">
+      <element id="module-output" name="ClaseQuince" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/Programming/Java/Libraries/commons-lang3-3.8.1.jar" path-in-jar="/" />
+      <element id="library" level="project" name="commons-lang3-3.8.1" />
+    </root>
+  </artifact>
+</component>
