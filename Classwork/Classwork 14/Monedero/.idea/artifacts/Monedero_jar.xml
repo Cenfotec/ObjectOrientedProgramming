@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Monedero:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Monedero_jar</output-path>
+    <root id="archive" name="Monedero.jar">
+      <element id="module-output" name="Monedero" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../AccesoBD/out/artifacts/AccesoBD_jar/AccesoBD.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/Programming/MySQL Server/sqljdbc42.jar" path-in-jar="/" />
+      <element id="library" level="project" name="AccesoBD" />
+      <element id="library" level="project" name="sqljdbc42" />
+    </root>
+  </artifact>
+</component>

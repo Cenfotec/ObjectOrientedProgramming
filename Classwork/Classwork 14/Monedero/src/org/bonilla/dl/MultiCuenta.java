@@ -9,11 +9,11 @@ public class MultiCuenta {
 
     public MultiCuenta() { }
 
-    public Cuenta crearCuenta(int numCuenta, double saldo, LocalDate fechaCreacion, String duenio) throws Exception {
+    public Cuenta crearCuenta(String idCliente, int numCuenta, double saldo, LocalDate fechaCreacion, String duenio) throws Exception {
         Cuenta cuenta = null;
         String query;
-        query = "INSERT INTO Cuenta(numero_cuenta, duenio, saldo, fecha) " +
-        "VALUES(" + numCuenta + ", '" + duenio + "'," + saldo+ ",'" + fechaCreacion + "');";
+        query = "INSERT INTO Cuenta(idCuenta, saldo, fechaCreacion, idCliente) " +
+        "VALUES(" + numCuenta + "," + saldo + ",'" + fechaCreacion + "'," + idCliente + ");";
         try {
             Conector.getConector().ejecutarSQL(query);
             cuenta = new Cuenta(numCuenta, saldo, fechaCreacion, duenio);

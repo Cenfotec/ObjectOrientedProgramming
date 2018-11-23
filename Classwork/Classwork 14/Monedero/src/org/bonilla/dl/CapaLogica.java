@@ -1,22 +1,22 @@
 package org.bonilla.dl;
 
-import org.bonilla.bl.Cuenta;
+import org.bonilla.bl.Cliente;
 
 import java.util.ArrayList;
 
 public class CapaLogica {
-    private ArrayList<Cuenta> listaCuenta;
+    private ArrayList<Cliente> listaCliente;
 
     public CapaLogica() {
-        listaCuenta = new ArrayList<>();
+        listaCliente = new ArrayList<>();
     }
 
-    public void registrarCuenta(Cuenta cuenta) {
-        listaCuenta.add(cuenta);
+    public void registrarCliente(Cliente cliente) {
+        listaCliente.add(cliente);
     }
 
-    public ArrayList<Cuenta> getListaCuenta() {
-        ArrayList<Cuenta> lista = new ArrayList<>(listaCuenta);
+    public ArrayList<Cliente> getListaCliente() {
+        ArrayList<Cliente> lista = new ArrayList<>(listaCliente);
         return lista;
     }
 }

@@ -1,13 +1,24 @@
 package org.bonilla.bl;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class Cuenta {
-    private int cantCuentas;
-    private int numCuenta;
-    private double saldo;
-    private LocalDate fechaCreacion;
-    private String duenio;
+    protected int cantCuentas;
+    protected int numCuenta;
+    protected double saldo;
+    protected LocalDate fechaCreacion;
+    protected String duenio; // Cliente duenio
+    protected ArrayList<Operacion> listaOperacion;
+
+    public Cuenta(int cantCuentas, int numCuenta, double saldo, LocalDate fechaCreacion, String duenio, ArrayList<Operacion> listaOperacion) {
+        this.cantCuentas = cantCuentas;
+        this.numCuenta = numCuenta;
+        this.saldo = saldo;
+        this.fechaCreacion = fechaCreacion;
+        this.duenio = duenio;
+        this.listaOperacion = listaOperacion;
+    }
 
     public Cuenta(int numCuenta, double saldo, LocalDate fechaCreacion, String duenio) {
         this.numCuenta = numCuenta;
@@ -56,12 +67,17 @@ public class Cuenta {
         this.duenio = duenio;
     }
 
-    public void depositar(int monto) {
-        this.saldo += monto;
+    public ArrayList<Operacion> getListaOperacion() {
+        return listaOperacion;
     }
 
-    public void retirar(int monto) {
-        this.saldo -= monto;
+    public void setListaOperacion(ArrayList<Operacion> listaOperacion) {
+        this.listaOperacion = listaOperacion;
+    }
+
+    public void registrarOperacion(int numero, String tipo, double monto) {
+        Operacion o = new Operacion(numero, tipo, monto, LocalDate.now());
+        listaOperacion.add(o);
     }
 
     @Override
