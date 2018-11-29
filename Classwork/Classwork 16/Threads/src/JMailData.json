@@ -1,0 +1,10 @@
+{
+  "email": "from-email@gmail.com",
+  "password": "password",
+  "smtpProperties": {
+    "host": "smtp.gmail.com",
+    "port": 587,
+    "auth": true,
+    "tls": true
+  }
+}

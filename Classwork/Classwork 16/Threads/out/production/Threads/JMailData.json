@@ -1,0 +1,10 @@
+{
+  "email": "pbonillag@ucenfotec.ac.cr",
+  "password": "PBGUCenfotec1@",
+  "smtpProperties": {
+    "host": "smtp.gmail.com",
+    "port": 587,
+    "auth": true,
+    "tls": true
+  }
+}
